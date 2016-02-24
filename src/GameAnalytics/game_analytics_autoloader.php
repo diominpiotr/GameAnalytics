@@ -20,5 +20,5 @@ spl_autoload_register(function ($class) use ($mapping) {
     }
 }, true);
 
-include '../../../src/Curl/Curl.php';
-include '../../../src/UUID.php';
+include '../src/Curl/Curl.php';
+include '../src/UUID.php';
