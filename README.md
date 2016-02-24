@@ -11,7 +11,6 @@ https://gist.github.com/dahnielson/508447
 
 ## Usage
 ```php
-    include '../../system/gameanalytics/config.php';
     include '../src/GameAnalytics/game_analytics_autoloader.php';
     include '../src/Curl/Curl.php';
     include '../src/UUID.php';
