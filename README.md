@@ -21,22 +21,22 @@ https://gist.github.com/dahnielson/508447
     $game_analytics = GameAnalytics::getInstance(<geme_key>, <secret_key>);
 ```
 Example authentication.
-
+```php
     $game_analytics
                 ->set("foo", "var")
                 ->authentication();
-
+```
 Use the set() function to configure the required annotations, you can use the array set annotations.
-
+```php
     $game_analytics
             ->set(array(
                 "foo" => "var",
                 "foo2" => "var2"
             ))
             ->authentication();
-
+```
 Next, you can create "event" and use send() to send the event.
-
+```php
     $event_user = new \GameAnalytics\Event\EventUser($authentication);
     $event_user
         ->device(<value>);
@@ -44,9 +44,9 @@ Next, you can create "event" and use send() to send the event.
     $game_analytics
         ->set($event_user)
         ->send();
-
+```
 ### Complete example
-
+```php
     use GameAnalytics\GameAnalytics;
 
     $game_analytics = GameAnalytics::getInstance(<geme_key>, <secret_key>);
@@ -77,3 +77,4 @@ Next, you can create "event" and use send() to send the event.
     } catch (Exception $e) {
         die($e->__toString());
     }
+```
