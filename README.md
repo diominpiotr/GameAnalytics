@@ -10,7 +10,7 @@ Requiered the class UUID, the following class generates VALID RFC 4122 COMPLIANT
 https://gist.github.com/dahnielson/508447
 
 ## Usage
-´´´php
+```php
     include '../../system/gameanalytics/config.php';
     include '../src/GameAnalytics/game_analytics_autoloader.php';
     include '../src/Curl/Curl.php';
@@ -19,7 +19,7 @@ https://gist.github.com/dahnielson/508447
     use GameAnalytics\GameAnalytics;
 
     $game_analytics = GameAnalytics::getInstance(<geme_key>, <secret_key>);
-´´´
+```
 Example authentication.
 
     $game_analytics
