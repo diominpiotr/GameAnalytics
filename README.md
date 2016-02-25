@@ -35,7 +35,7 @@ Use the set() function to configure the required annotations, you can use the ar
 ```
 Next, you can create "event" and use send() to send the event.
 ```php
-    $event_user = new EventUser($authentication);
+    $event_user = new EventUser();
     $event_user
         ->device(<value>);
 
