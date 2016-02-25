@@ -14,6 +14,7 @@ https://gist.github.com/dahnielson/508447
     include '../src/GameAnalytics/game_analytics_autoloader.php';
 
     use GameAnalytics\GameAnalytics;
+    use GameAnalytics\Event\EventUser;
 
     $game_analytics = GameAnalytics::getInstance(<geme_key>, <secret_key>);
 ```
@@ -34,7 +35,7 @@ Use the set() function to configure the required annotations, you can use the ar
 ```
 Next, you can create "event" and use send() to send the event.
 ```php
-    $event_user = new \GameAnalytics\Event\EventUser($authentication);
+    $event_user = new EventUser($authentication);
     $event_user
         ->device(<value>);
 
@@ -42,9 +43,23 @@ Next, you can create "event" and use send() to send the event.
         ->set($event_user)
         ->send();
 ```
+
+Available events
+
+```php
+    use GameAnalytics\Event\EventUser;
+    use GameAnalytics\Event\EventSessionEnd;
+    use GameAnalytics\Event\EventBusiness;
+    use GameAnalytics\Event\EventProgression;
+    use GameAnalytics\Event\EventResource;
+    use GameAnalytics\Event\EventDesign;
+    use GameAnalytics\Event\EventError;
+```
+
 ### Complete example
 ```php
     use GameAnalytics\GameAnalytics;
+    use GameAnalytics\Event\EventUser;
 
     $game_analytics = GameAnalytics::getInstance(<geme_key>, <secret_key>);
 
@@ -58,7 +73,7 @@ Next, you can create "event" and use send() to send the event.
         die($e->__toString());
     }
 
-    $event_user = new \GameAnalytics\Event\EventUser();
+    $event_user = new EventUser();
     $event_user
         ->device('unknown')
         ->v(2)

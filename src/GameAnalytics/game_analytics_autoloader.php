@@ -9,7 +9,6 @@ $mapping = array(
     'GameAnalytics\Event\EventProgression' => 'Event/EventProgression.php',
     'GameAnalytics\Event\EventResource' => 'Event/EventResource.php',
     'GameAnalytics\Event\EventDesign' => 'Event/EventDesign.php',
-    'GameAnalytics\Event\EventUser' => 'Event/EventUser.php',
     'GameAnalytics\Event\EventError' => 'Event/EventError.php',
     'GameAnalytics\GameAnalyticsException' => 'GameAnalyticsException.php'
 );
@@ -22,4 +21,3 @@ spl_autoload_register(function ($class) use ($mapping) {
 
 include '../src/Curl/Curl.php';
 include '../src/UUID.php';
-
