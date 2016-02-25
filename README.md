@@ -57,6 +57,7 @@ Available events
 ```
 
 ### Complete example
+Send event user.
 ```php
     use GameAnalytics\GameAnalytics;
     use GameAnalytics\Event\EventUser;
